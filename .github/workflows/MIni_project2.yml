@@ -1,4 +1,4 @@
-name:project 
+name:Mini_project
 on:
   workflow_dispatch:
     inputs:
