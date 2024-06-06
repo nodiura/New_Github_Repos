@@ -1,0 +1,15 @@
+name: Mini Project 
+ 
+on:
+workflow_dispatch:
+Input:
+book_name: 
+description: Name of the book
+type: string
+author_name:
+description: Author of the book 
+  type: string
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
