@@ -1,10 +1,38 @@
-name:Mini_project
+
+name: Manual Dispatch Workflow
+
 on:
+
   workflow_dispatch:
+
     inputs:
-      book_name:
-        description: Name of the book
-        type: string
-      author_name:
-        description: Author of the book
-        type: string
+
+      username:
+
+        description: 'The name of the user'
+
+        required: true
+
+        default: 'JohnDoe'
+
+      favorite_color:
+
+        description: 'The favorite color of the user'
+
+        required: true
+
+        default: 'blue'
+
+jobs:
+
+  echo_job:
+
+    runs-on: ubuntu-latest
+
+    steps:
+
+      - name: Echo Inputs
+
+        run: |
+
+          echo "${{ github.event.inputs.username }} says hello, and favorite color is ${{ github.event.inputs.favorite_color }}"
