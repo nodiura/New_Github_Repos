@@ -1,0 +1,10 @@
+name:project 
+on:
+  workflow_dispatch:
+    inputs:
+      book_name:
+        description: Name of the book
+        type: string
+      author_name:
+        description: Author of the book
+        type: string
